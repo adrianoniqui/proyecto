@@ -1,0 +1,532 @@
+/* Reset y Estilos Globales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 1.5rem; 
+  text-align: center;
+}
+
+header .nav-menu li {
+  width: 100%;
+}
+
+header .nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  display: flex; 
+  align-items: center;  
+  gap: 0.5rem; 
+  transition: background 0.3s ease;
+}
+
+header .nav-menu img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+header .nav-menu a:hover {
+  background: #555; 
+}
+
+/* Contenido principal */
+main {
+  margin-left: 220px; 
+  padding: 0;
+  /* background no necesario, 
+     si no se usa es mejor eliminarlo */
+}
+
+/* Secciones Generales */
+section {
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0;
+  padding: 2rem;
+  background: #2f2f2f; 
+  color: #fff;
+}
+
+section h1 {
+  font-size: 2rem;
+  color: green;
+}
+
+section p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Sección Home */
+#home {
+  width: 100%;
+  min-height: 100vh;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2f2f2f;  
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+#presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: #2f2f2f;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.texto-botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.texto-home p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.texto-home p strong {
+  color: #2b7f2b; 
+}
+
+.image-container {
+  max-width: 300px;
+  flex-shrink: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Iconos sociales en Home */
+.social-icons-home {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.social-icons-home img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons-home img:hover {
+  transform: scale(1.1);
+}
+
+/* Botones Home */
+#contratame {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 1rem;
+}
+
+.botones-superiores {
+  display: flex;
+  gap: 1rem; 
+}
+
+.boton-cv {
+  align-self: center;
+  margin-top: 1rem; 
+}
+
+/* Estilo de Botones Globales */
+.btn-green {
+  background: #228B22; 
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-yellow {
+  background: #ffea00; 
+  color: #333;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-green:hover,
+.btn-yellow:hover {
+  background: #555;
+  color: #fff;
+}
+
+/* About */
+#about {
+  color: #fff;
+}
+
+#contenido_sobre_mi p {
+  max-width: 600px; 
+}
+
+/* Contenedor info (About) */
+.contenedor-info {
+  display: flex;
+  align-items: flex-start; 
+  gap: 2rem;
+  /* Para mayor separación lateral, podemos usar padding si se desea 
+     Ejemplo: padding: 0 2rem;
+  */
+}
+
+.contenedor-info ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+#datos_profesionales {
+  padding-right: 10rem;
+}
+
+/* Skills */
+.skills img {
+  width: 50px;
+  margin: 0.5rem;
+}
+
+/* Services */
+.services-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.services-container .service {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1 1 30%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.services-container .service img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+/* Galería */
+.gallery-grid {
+  display: grid;
+  gap: 1rem; /* Espacio entre las imágenes */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(2, auto);   /* 2 filas */
+  justify-items: center; 
+  align-items: center;
+}
+
+.gallery-grid img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain; /* La imagen se ajusta dentro del cuadro */
+  background: #fff;     /* Fondo blanco */
+  border-radius: 5px;   /* Opcional para esquinas redondeadas */
+  display: block;       /* Asegura que se comporte como un bloque */
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem 0;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  header .nav-menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  header .nav-menu a {
+    font-size: 1rem;
+  }
+
+  header .nav-menu img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #presentacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    max-width: 200px;
+    margin-top: 1.5rem;
+  }
+}
+#habilidades_porcentaje ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#habilidades_porcentaje li {
+  margin-bottom: 2rem; /* Espacio entre cada habilidad */
+  font-size: 1rem;
+  color: #fff;
+}
+/* Contenedor de la barra de la habilidad */
+.skill-bar {
+  width: 100%;
+  background: #4a4a4a; /* Fondo de la barra vacía */
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 0.5rem; /* Un poco de espacio entre el texto y la barra */
+  position: relative;
+}
+.skill-level {
+  background: #cfcfcf; /* Color de la barra que muestra el porcentaje */
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease; /* Animación opcional */
+}
+#habilidades_porcentaje h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.services-container .service {
+  background: #000000; /* Un tono oscuro más intenso para el fondo de las tarjetas */
+  border-radius: 5px; /* Opcional, para darle un estilo más suave */
+  padding: 1rem; /* Opcional, para separar el contenido de los bordes */
+  box-shadow: none; /* Puedes remover o ajustar la sombra si no combina con el fondo oscuro */
+}
+#services h3 {
+  color: green;
+}
+/* Sección Contact */
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  background: #2f2f2f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#contact h1 {
+  font-size: 2.5rem;
+  color: #2b7f2b; /* Verde para el título "Contactame" */
+  margin: 0;
+}
+
+/* Contenedor principal de Contacto */
+.contact-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+/* Columna Izquierda - Información de Contacto */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-item strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.info-item p {
+  margin: 0;
+}
+
+.icono-contacto {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Columna Derecha - Formulario */
+.contact-form-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Iconos Sociales en la parte superior derecha */
+.social-icons-contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icons-contact img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.social-icons-contact img:hover {
+  transform: scale(1.1);
+}
+
+/* Título del formulario */
+.contact-form-container h2 {
+  margin-top: 2.5rem; /* Desplaza hacia abajo para no chocar con los iconos */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Estilos del Formulario */
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+#name,
+#email,
+#message {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+#message {
+  height: 150px;
+  resize: none;
+}
+
+/* Botón Enviar */
+.btn-green {
+  background: #228B22;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.btn-green:hover {
+  background: #555;
+}
+
+/* Footer interno de Contacto */
+.contact-footer {
+  width: 100%;
+  background: #2b7f2b; /* verde oscuro */
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.contact-footer p{
+  color: hsl(0, 0%, 0%);
+}
+#gallery h2{
+  color: #228B22;
+}
