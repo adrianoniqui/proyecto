@@ -10,6 +10,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -31,8 +35,8 @@ header .nav-menu {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; 
-  gap: 1.5rem; 
+  flex-direction: column;
+  gap: 1.5rem;
   text-align: center;
 }
 
@@ -46,7 +50,7 @@ header .nav-menu a {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.5rem;
-  display: flex; 
+  display: flex;
   align-items: center;  
   gap: 0.5rem; 
   transition: background 0.3s ease;
@@ -66,8 +70,6 @@ header .nav-menu a:hover {
 main {
   margin-left: 220px; 
   padding: 0;
-  /* background no necesario, 
-     si no se usa es mejor eliminarlo */
 }
 
 /* Secciones Generales */
@@ -222,9 +224,6 @@ section p {
   display: flex;
   align-items: flex-start; 
   gap: 2rem;
-  /* Para mayor separación lateral, podemos usar padding si se desea 
-     Ejemplo: padding: 0 2rem;
-  */
 }
 
 .contenedor-info ul {
@@ -251,13 +250,12 @@ section p {
 }
 
 .services-container .service {
-  background: white;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background: #000000; 
+  border-radius: 5px; 
+  padding: 1rem; 
+  box-shadow: none; 
   flex: 1 1 30%;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .services-container .service img {
@@ -265,12 +263,20 @@ section p {
   margin-bottom: 1rem;
 }
 
+#services h3 {
+  color: green;
+}
+
 /* Galería */
+#gallery h2 {
+  color: #228B22;
+}
+
 .gallery-grid {
   display: grid;
-  gap: 1rem; /* Espacio entre las imágenes */
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  grid-template-rows: repeat(2, auto);   /* 2 filas */
+  gap: 1rem; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, auto);   
   justify-items: center; 
   align-items: center;
 }
@@ -278,19 +284,196 @@ section p {
 .gallery-grid img {
   width: 150px;
   height: 150px;
-  object-fit: contain; /* La imagen se ajusta dentro del cuadro */
-  background: #fff;     /* Fondo blanco */
-  border-radius: 5px;   /* Opcional para esquinas redondeadas */
-  display: block;       /* Asegura que se comporte como un bloque */
+  object-fit: contain; 
+  background: #fff;     
+  border-radius: 5px;   
+  display: block;       
 }
 
+/* Sección Contact */
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  background: #2f2f2f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 
-/* Footer */
-footer {
+#contact h1 {
+  font-size: 2.5rem;
+  color: #2b7f2b; 
+  margin: 0;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-item strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.info-item p {
+  margin: 0;
+}
+
+.icono-contacto {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.contact-form-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-icons-contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icons-contact img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.social-icons-contact img:hover {
+  transform: scale(1.1);
+}
+
+.contact-form-container h2 {
+  margin-top: 2.5rem; 
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+#name,
+#email,
+#message {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+#message {
+  height: 150px;
+  resize: none;
+}
+
+.btn-green {
+  background: #228B22;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.btn-green:hover {
+  background: #555;
+}
+
+.contact-footer {
+  width: 100%;
+  background: #2b7f2b;
   text-align: center;
-  background: #333;
-  color: white;
   padding: 1rem 0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.contact-footer p {
+  color: hsl(0, 0%, 0%);
+}
+
+#habilidades_porcentaje ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#habilidades_porcentaje li {
+  margin-bottom: 2rem; 
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Contenedor de la barra de la habilidad */
+.skill-bar {
+  width: 100%;
+  background: #4a4a4a; 
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 0.5rem; 
+  position: relative;
+}
+
+.skill-level {
+  background: #cfcfcf; 
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease; 
+}
+
+#habilidades_porcentaje h3 {
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 /* Ajustes Responsivos */
@@ -323,213 +506,106 @@ footer {
   #presentacion {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+  }
+
+  .texto-home p {
+    font-size: 1.2rem;
   }
 
   .image-container {
     max-width: 200px;
     margin-top: 1.5rem;
   }
-}
-#habilidades_porcentaje ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+  #contenido_sobre_mi p {
+    max-width: 100%;
+  }
+
+  .contenedor-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #datos_profesionales {
+    padding-right: 0;
+  }
+
+  /* Servicios en una sola columna */
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-container .service {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Galería en 2 columnas */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info, 
+  .contact-form-container {
+    width: 100%;
+  }
+
+  .social-icons-contact {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form-container h2 {
+    margin-top: 1rem;
+  }
+
+  /* Reducir padding general en secciones */
+  section {
+    padding: 1rem;
+  }
+
+  section h1, 
+  section h2 {
+    font-size: 1.5rem;
+  }
 }
 
-#habilidades_porcentaje li {
-  margin-bottom: 2rem; /* Espacio entre cada habilidad */
-  font-size: 1rem;
-  color: #fff;
-}
-/* Contenedor de la barra de la habilidad */
-.skill-bar {
-  width: 100%;
-  background: #4a4a4a; /* Fondo de la barra vacía */
-  border-radius: 10px;
-  height: 10px;
-  margin-top: 0.5rem; /* Un poco de espacio entre el texto y la barra */
-  position: relative;
-}
-.skill-level {
-  background: #cfcfcf; /* Color de la barra que muestra el porcentaje */
-  height: 100%;
-  border-radius: 10px;
-  transition: width 0.5s ease; /* Animación opcional */
-}
-#habilidades_porcentaje h3 {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.services-container .service {
-  background: #000000; /* Un tono oscuro más intenso para el fondo de las tarjetas */
-  border-radius: 5px; /* Opcional, para darle un estilo más suave */
-  padding: 1rem; /* Opcional, para separar el contenido de los bordes */
-  box-shadow: none; /* Puedes remover o ajustar la sombra si no combina con el fondo oscuro */
-}
-#services h3 {
-  color: green;
-}
-/* Sección Contact */
-#contact {
-  width: 100%;
-  min-height: 100vh;
-  background: #2f2f2f;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
+@media (max-width: 480px) {
+  .texto-home p {
+    font-size: 1rem;
+  }
 
-#contact h1 {
-  font-size: 2.5rem;
-  color: #2b7f2b; /* Verde para el título "Contactame" */
-  margin: 0;
-}
+  .gallery-grid img {
+    width: 100px;
+    height: 100px;
+  }
 
-/* Contenedor principal de Contacto */
-.contact-container {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  gap: 2rem;
-}
+  section {
+    padding: 0.5rem;
+  }
 
-/* Columna Izquierda - Información de Contacto */
-.contact-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+  .boton-cv a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
 
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+  .contact-form-container form {
+    gap: 0.5rem;
+  }
 
-.info-item strong {
-  font-size: 1.2rem;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.info-item p {
-  margin: 0;
-}
-
-.icono-contacto {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-/* Columna Derecha - Formulario */
-.contact-form-container {
-  flex: 1;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Iconos Sociales en la parte superior derecha */
-.social-icons-contact {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.social-icons-contact img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
-  border-radius: 5px;
-}
-
-.social-icons-contact img:hover {
-  transform: scale(1.1);
-}
-
-/* Título del formulario */
-.contact-form-container h2 {
-  margin-top: 2.5rem; /* Desplaza hacia abajo para no chocar con los iconos */
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-/* Estilos del Formulario */
-.contact-form-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.input-group {
-  display: flex;
-  gap: 1rem;
-}
-
-.input-group input {
-  flex: 1;
-}
-
-#name,
-#email,
-#message {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-  color: #333;
-}
-
-#message {
-  height: 150px;
-  resize: none;
-}
-
-/* Botón Enviar */
-.btn-green {
-  background: #228B22;
-  color: #fff;
-  padding: 0.7rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  align-self: flex-start;
-  transition: background 0.3s ease;
-}
-
-.btn-green:hover {
-  background: #555;
-}
-
-/* Footer interno de Contacto */
-.contact-footer {
-  width: 100%;
-  background: #2b7f2b; /* verde oscuro */
-  text-align: center;
-  padding: 1rem 0;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-.contact-footer p{
-  color: hsl(0, 0%, 0%);
-}
-#gallery h2{
-  color: #228B22;
-}
-html {
-  scroll-behavior: smooth;
+  #message {
+    height: 100px;
+  }
 }
