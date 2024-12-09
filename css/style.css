@@ -530,3 +530,6 @@ footer {
 #gallery h2{
   color: #228B22;
 }
+html {
+  scroll-behavior: smooth;
+}
